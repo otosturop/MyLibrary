@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="scriptim.js"></script>
+</head>
+<body>
+
+<div class="btn-group btn-group-justified">
+    <a href="index.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-home pull-left"> <strong>&nbsp; Anasayfa</strong></span></a>
+    <a href="about.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-info-circle pull-left"> <strong>&nbsp; Hakkımızda</strong></span></a>
+</div>
+<br/>
+
+
+<div class="container">
+    <div class="row">
+        <h2>Gelişmiş Arama Sayfası</h2>
+        <hr />
+    </div>
+
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group form-group-lg">
+
+            <div class="col-xs-10 error">
+                <select class="selectpicker show-tick form-control" title="Yaş Aralığı Seçiniz">
+                    <option>0-3 Yaş</option>
+                    <option>3-6 Yaş</option>
+                    <option>6-8 Yaş</option>
+                    <option>8-12 Yaş</option>
+                    <option>12-15 Yaş</option>
+                </select>
+            </div>
+            <div class="col-xs-10 error">
+                <select class="selectpicker show-tick form-control" title="Kitap Türü Seçiniz">
+                    <option>Sesli Kitaplar</option>
+                    <option>Eğitici Kartlar</option>
+                    <option>Eğitici Kitaplar</option>
+                    <option>Etkinlik Kitapları</option>
+                    <option>Masal & Hikaye</option>
+                    <option>Masallar</option>
+                    <option>Bilim Kurgu Kitapları</option>
+                    <option>Felsefe Kitapları</option>
+                    <option>Fantastik Kitaplar</option>
+                    <option>Şiir Kitapları</option>
+                    <option>Hikayeler</option>
+                    <option>Romanlar</option>
+                    <option>Çizgi Dizi</option>
+                    <option>Biyografi</option>
+                </select>
+
+
+            </div>
+            <div class="col-xs-10 error">
+                <select class="selectpicker show-tick form-control" title="Dil Seçiniz">
+                    <option>Türkçe</option>
+                    <option>Türlçe İngilizce</option>
+                </select>
+            </div>
+            <div class="col-xs-10 error" id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Yazar Adı Giriniz" >
+                    <span class="input-group-addon">
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-10 error">
+                <button type="submit" class="btn btn-success">
+                    <span class="fa fa-search"></span> Ara </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="footer">
+    <div class="btn-group btn-group-justified">
+        <a href="iletisim.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-envelope pull-left"> <strong>&nbsp; İletişim</strong></span></a>
+        <a class="btn btn-primary" onclick="back()" style="font-family: Calibri; font-size: larger;"><span class="fa fa-reply-all pull-left"> <strong>&nbsp; Geri Dön</strong></span></a>
+    </div>
+</div>
+</body>
+</html>

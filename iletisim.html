@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="scriptim.js"></script>
+</head>
+<body>
+
+<div class="btn-group btn-group-justified">
+    <a href="index.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-home pull-left"> <strong>&nbsp; Anasayfa</strong></span></a>
+    <a href="about.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-info-circle pull-left"> <strong>&nbsp; Hakkımızda</strong></span></a>
+</div>
+<br/>
+<h3 style="text-align: center">Bize Ulaşın</h3>
+<br/>
+<div class="container">
+    <form id="contact-form" method="post" action="contact.php" role="form">
+        <div class="messages"></div>
+
+        <div class="controls">
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="form_name">Adınız *</label>
+                        <input id="form_name" type="text" name="Adi" class="form-control" placeholder="Lütfen adınızı yazın *" required="required" data-error="Adınız gerekli.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="form_lastname">Soyadınız *</label>
+                        <input id="form_lastname" type="text" name="Soyadi" class="form-control" placeholder="Lütfen soyadınızı yazın *" required="required" data-error="Soyadınız gerekli.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="form_email">E-Posta Adresiniz *</label>
+                        <input id="form_email" type="email" name="EPosta" class="form-control" placeholder="Lütfen E-Posta adresinizi yazın *" required="required" data-error="Geçerli bir E-Posta gerekli.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="form_phone">Telefon Numaranız</label>
+                        <input id="form_phone" type="tel" name="Telefon" class="form-control" placeholder="Lütfen telefon numaranızı yazın">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="form_message">Mesajınız *</label>
+                        <textarea id="form_message" name="Mesaj" class="form-control" placeholder="Lütfen mesajınızı yazın *" rows="4" required="required" data-error="Lütfen mesajınızı yazın."></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-success btn-send">
+                        <span class="fa fa-paper-plane"></span> Mesajı Gönder </button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+<div class="footer">
+    <div class="btn-group btn-group-justified">
+        <a href="iletisim.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-envelope pull-left"> <strong>&nbsp; İletişim</strong></span></a>
+        <a class="btn btn-primary" onclick="back()" style="font-family: Calibri; font-size: larger;"><span class="fa fa-reply-all pull-left"> <strong>&nbsp; Geri Dön</strong></span></a>
+    </div>
+</div>
+
+</body>
+</html>

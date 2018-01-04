@@ -1,0 +1,33 @@
+#imaginary_container{
+    margin-top:5%;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+    color: #F08080;
+}
+.gecis{
+    margin-top:4%;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.sira{
+    margin-top:4%;
+}
+
+.error{
+    margin-top:8%;
+
+}
