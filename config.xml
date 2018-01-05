@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns   = "http://www.w3.org/ns/widgets"
-        xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "me.MehmetArikan.Kutuphanem"
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id          = "me.MehmetArikan.BibliyoFil"
         versionCode = "10"
         version     = "1.0.0" >
 
@@ -24,7 +26,7 @@
     <!-- Ek Özellikler -->
 
     <preference name="orientation" value="portrait" />
-    <preference name="fullscreen" value="false" />
+    <preference name="fullscreen" value="true" />
 
     <!-- İkon -->
 
