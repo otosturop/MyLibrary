@@ -13,12 +13,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="scriptim.js"></script>
+    <script src="data.js"></script>
 </head>
 <body>
 
 <div class="btn-group btn-group-justified">
-    <a href="index.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-home pull-left"> <strong>&nbsp; Anasayfa</strong></span></a>
-    <a href="about.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-info-circle pull-left"> <strong>&nbsp; Hakkımızda</strong></span></a>
+    <a href="index.html" class="btn btn-danger" style="font-family: Calibri; font-size: larger;"><span class="fa fa-home pull-left"> <strong>&nbsp; Anasayfa</strong></span></a>
+    <a href="about.html" class="btn btn-danger" style="font-family: Calibri; font-size: larger;"><span class="fa fa-info-circle pull-left"> <strong>&nbsp; Hakkımızda</strong></span></a>
 </div>
 <br/>
 
@@ -30,64 +31,103 @@
     </div>
 
 
-    <form class="form-horizontal" role="form">
         <div class="form-group form-group-lg">
 
             <div class="col-xs-10 error">
-                <select class="selectpicker show-tick form-control" title="Yaş Aralığı Seçiniz">
-                    <option>0-3 Yaş</option>
-                    <option>3-6 Yaş</option>
-                    <option>6-8 Yaş</option>
-                    <option>8-12 Yaş</option>
-                    <option>12-15 Yaş</option>
+                <select class="selectpicker show-tick form-control" id="age" title="Yaş Aralığı Seçiniz">
+                    <option value="0">0-3 Yaş</option>
+                    <option value="3">3-6 Yaş</option>
+                    <option value="6">6-8 Yaş</option>
+                    <option value="8">8-12 Yaş</option>
+                    <option value="12">12-15 Yaş</option>
                 </select>
             </div>
             <div class="col-xs-10 error">
-                <select class="selectpicker show-tick form-control" title="Kitap Türü Seçiniz">
-                    <option>Sesli Kitaplar</option>
-                    <option>Eğitici Kartlar</option>
-                    <option>Eğitici Kitaplar</option>
-                    <option>Etkinlik Kitapları</option>
-                    <option>Masal & Hikaye</option>
-                    <option>Masallar</option>
-                    <option>Bilim Kurgu Kitapları</option>
-                    <option>Felsefe Kitapları</option>
-                    <option>Fantastik Kitaplar</option>
-                    <option>Şiir Kitapları</option>
-                    <option>Hikayeler</option>
-                    <option>Romanlar</option>
-                    <option>Çizgi Dizi</option>
-                    <option>Biyografi</option>
+                <select class="selectpicker show-tick form-control" id="kind" title="Kitap Türü Seçiniz">
+                    <option value="SesliKitap">Sesli Kitaplar</option>
+                    <option value="EgiticiKart">Eğitici Kartlar</option>
+                    <option value="egiticikitap">Eğitici Kitaplar</option>
+                    <option value="EtkinKitap">Etkinlik Kitapları</option>
+                    <option value="HikaMas">Masal & Hikaye</option>
+                    <option value="Masal">Masallar</option>
+                    <option value="CocukBilKur">Bilim Kurgu Kitapları</option>
+                    <option value="Felsefe">Felsefe Kitapları</option>
+                    <option value="Fantastik">Fantastik Kitaplar</option>
+                    <option value="Siir">Şiir Kitapları</option>
+                    <option value="Hikaye">Hikayeler</option>
+                    <option value="Roman">Romanlar</option>
+                    <option value="CizgiDizi">Çizgi Dizi</option>
+                    <option value="Biyografi">Biyografi</option>
                 </select>
 
 
             </div>
             <div class="col-xs-10 error">
-                <select class="selectpicker show-tick form-control" title="Dil Seçiniz">
-                    <option>Türkçe</option>
-                    <option>Türlçe İngilizce</option>
+                <select class="selectpicker show-tick form-control" id="lang" title="Dil Seçiniz">
+                    <option value="Türkçe">Türkçe</option>
+                    <option value="Türkçe-İngilizce">İngilizce&Türkçe</option>
                 </select>
             </div>
             <div class="col-xs-10 error" id="imaginary_container">
                 <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Yazar Adı Giriniz" >
+                    <input type="text" class="form-control" id="author" placeholder="Yazar Adı Giriniz" >
                     <span class="input-group-addon">
                     </span>
                 </div>
             </div>
             <div class="col-xs-10 error">
-                <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-success" onclick="ara()">
                     <span class="fa fa-search"></span> Ara </button>
             </div>
         </div>
-    </form>
+
 </div>
+<br/><br/>
+<div id="show"></div>
+<script>
+
+        var lang;
+        var age;
+        var kind;
 
 
+    $("#age").change(function () {
+        age = $(this).val();
+    });
+
+    $("#kind").change(function () {
+        kind = $(this).val();
+    });
+
+    $("#lang").change(function () {
+        lang = $(this).val();
+    });
+
+        var author = $("#author").val();
+
+    function ara() {
+
+        if(typeof lang == "undefined" || typeof age == "undefined" || typeof  kind == "undefined" || typeof  author =="") {
+            $("#show").empty();
+            $("#show").append("<p style='color: red; text-align: center;'>Lütfen Boş Alan Bırakmayınız</p>");
+
+        }else {
+            $("#show").empty();
+            for(var i = 0; i < 38; i++)
+            {
+                if(data[i].itemGeting == kind && data[i].itemLanguage == lang && data[i].itemSeting == age && data[i].itemAuthor.toLowerCase().indexOf(author.toLowerCase()) != -1)
+                {
+                    $("#show").append("<div class='container'><div class='row'><div class='col-xs-5'><img style='width: 100%;' src='" + data[i].itemImage + "'> </div><div class='col-xs-7'><strong><p>"+ data[i].itemName + "</p></strong><p>Yazar: " + data[i].itemAuthor + "</p><p>Yayınevi: " + data[i].itemPublisher + "</p></div><div class='col-xs-12'><p>" + data[i].itemDescription + "</p><p>Sayfa Sayısı: " + data[i].itemNumberofPage + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yayın Yılı: " + data[i].itemCreateonDate + "</p><p>Dili: " + data[i].itemLanguage + "</p> </div></div></div> <hr>");
+                }
+            }
+        }
+    }
+
+</script>
 <div class="footer">
     <div class="btn-group btn-group-justified">
-        <a href="iletisim.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-envelope pull-left"> <strong>&nbsp; İletişim</strong></span></a>
-        <a class="btn btn-primary" onclick="back()" style="font-family: Calibri; font-size: larger;"><span class="fa fa-reply-all pull-left"> <strong>&nbsp; Geri Dön</strong></span></a>
+        <a href="iletisim.html" class="btn btn-danger" style="font-family: Calibri; font-size: larger;"><span class="fa fa-envelope pull-left"> <strong>&nbsp; İletişim</strong></span></a>
+        <a class="btn btn-danger" onclick="back()" style="font-family: Calibri; font-size: larger;"><span class="fa fa-reply-all pull-left"> <strong>&nbsp; Geri Dön</strong></span></a>
     </div>
 </div>
 </body>

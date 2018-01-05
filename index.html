@@ -15,8 +15,8 @@
 <body>
 
     <div class="btn-group btn-group-justified">
-        <a href="index.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-home pull-left"> <strong>&nbsp; Anasayfa</strong></span></a>
-        <a href="about.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-info-circle pull-left"> <strong>&nbsp; Hakkımızda</strong></span></a>
+        <a href="index.html" class="btn btn-danger" style="font-family: Calibri; font-size: larger;"><span class="fa fa-home pull-left"> <strong>&nbsp; Anasayfa</strong></span></a>
+        <a href="about.html" class="btn btn-danger" style="font-family: Calibri; font-size: larger;"><span class="fa fa-info-circle pull-left"> <strong>&nbsp; Hakkımızda</strong></span></a>
     </div>
     <br/>
     <p style="font-size:22px; color: #F08080;">Bibliyo<img src="images/logo_elephant.jpg" style="height: 22%; width: 22%;" />'e Hoşgeldiniz</p>
@@ -40,44 +40,48 @@
     <br/>
     <div class="container gecis">
         <div class="btn-group btn-group-justified">
-            <a href="page1.html" class="btn btn-primary"><span class="fa fa-arrow-right pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yaşlara Göre Kitaplar</span></a>
+            <a href="page1.html" class="btn btn-danger"><span class="fa fa-arrow-right pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yaşlara Göre Kitaplar</span></a>
         </div>
     </div>
 
     <div class="container gecis">
         <div class="btn-group btn-group-justified">
-            <a href="page2.html" class="btn btn-primary"><span class="fa fa-arrow-right pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Türlere Göre Kitaplar</span></a>
+            <a href="page2.html" class="btn btn-danger"><span class="fa fa-arrow-right pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Türlere Göre Kitaplar</span></a>
         </div>
     </div>
 
     <div class="container gecis">
         <div class="btn-group btn-group-justified">
-            <a href="search.html" class="btn btn-primary"><span class="fa fa-search pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gelişmiş Arama</span></a>
+            <a href="search.html" class="btn btn-danger"><span class="fa fa-search pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gelişmiş Arama</span></a>
         </div>
     </div>
     <div id="show"></div>
     <div class="footer">
         <div class="btn-group btn-group-justified">
-            <a href="iletisim.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-envelope pull-left"> <strong>&nbsp; İletişim</strong></span></a>
-            <a href="index.html" class="btn btn-primary" style="font-family: Calibri; font-size: larger;"><span class="fa fa-reply-all pull-left"> <strong>&nbsp; Geri Dön</strong></span></a>
+            <a href="iletisim.html" class="btn btn-danger" style="font-family: Calibri; font-size: larger;"><span class="fa fa-envelope pull-left"> <strong>&nbsp; İletişim</strong></span></a>
+            <a href="index.html" class="btn btn-danger" style="font-family: Calibri; font-size: larger;"><span class="fa fa-reply-all pull-left"> <strong>&nbsp; Geri Dön</strong></span></a>
         </div>
     </div>
 
 <script>
         function tara ()
         {
-            $("#show").empty()
+            $("#show").empty();
             $(".gecis").hide();
 
             var texts = $("#text").val();
 
             for(var i = 0; i < 38; i++)
             {
-                if(data[i].itemAuthor.toLowerCase().indexOf(texts.toLowerCase()) != -1)
+                if(data[i].itemName.toLowerCase().indexOf(texts.toLowerCase()) != -1)
                 {
                     $("#show").append("<div class='container'><div class='row'><div class='col-xs-5'><img style='width: 100%;' src='" + data[i].itemImage + "'> </div><div class='col-xs-7'><strong><p>"+ data[i].itemName + "</p></strong><p>Yazar: " + data[i].itemAuthor + "</p><p>Yayınevi: " + data[i].itemPublisher + "</p></div><div class='col-xs-12'><p>" + data[i].itemDescription + "</p><p>Sayfa Sayısı: " + data[i].itemNumberofPage + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yayın Yılı: " + data[i].itemCreateonDate + "</p><p>Dili: " + data[i].itemLanguage + "</p> </div></div></div> <hr>");
                 }
             }
+         /*   if($("#show").empty())
+            {
+                $("#show").append("<p>Sonuç Bulunamadı...</p>")
+            } */
         }
 </script>
 </body>

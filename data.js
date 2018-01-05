@@ -10,7 +10,7 @@ var data = [
         "itemCreateonDate": '2015',
         "itemPublisher": 'İş Bankası Kültür Yayınları',
         "itemNumberofPage": '8',
-        "itemLanguage":' Türkçe'
+        "itemLanguage":'Türkçe'
     },
     {
         "itemSeting":'0',
@@ -140,7 +140,7 @@ var data = [
         "itemCreateonDate": '2017',
         "itemPublisher": ' Eolo',
         "itemNumberofPage": '20',
-        "itemLanguage":'2017'
+        "itemLanguage":'Türkçe'
     },
     {
         "itemSeting":'3',
@@ -348,7 +348,7 @@ var data = [
         "itemCreateonDate": '2017',
         "itemPublisher": 'Pegasus',
         "itemNumberofPage": '320',
-        "itemLanguage":'İngilizce-Türkçe'
+        "itemLanguage":'Türkçe-İngilizce'
     },
     {
         "itemSeting":'8',
